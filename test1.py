@@ -1,3 +1,4 @@
+'''
 money = True
 if money:
     print('택시를 타고 가라')
@@ -27,38 +28,38 @@ x = 1
 y = 1
 # x==1 : True
 # True and True 1개라도 false이면 작동하지 않음
-'''
+
 if x== 1 and y==2:
     print('working')
 else:
     print('working2')
 
-'''
+
 #Tue of False, False or True, True or True // False or False
 c = 100
 y = 200
 money = 150
-'''
+
 if c >= moeny or y >= money:
     print('입장')
     
-'''
+
 # not : 부정
 # not True : False
 # not False : True
 
-'''if not False:
+if not False:
     print('working')
     
 #부정일 경우 작동하지 않음
-'''
+
 
 #and or not 꼭 알아두기
 
 #in과 not in
 
 w = [100, 500, 1000]
-'''
+
 if 100 in w:
     print('있다')
 
@@ -67,15 +68,13 @@ if 5000 in w:
 #리스트나 어떠한 열거형을 구현할 수 있는 것들의 안에 있는지 없는지에 대한 사실을
 #나타냄
 
-'''
 
-'''
 if 5000 not in w:
     print('집에서 가져와야겠다.')
     
-'''
 
-'''
+
+
 [91, 80, 72, 64, 59]
  90점 이상 : 아주 잘했어요
  80점 이상 : 잘했어요
@@ -84,7 +83,7 @@ if 5000 not in w:
  60점 미만 : 낙제
  
  변수 : score
-'''
+
 
 test = [91, 80, 72, 64, 59]
 
@@ -101,7 +100,7 @@ else:
     print('낙제')
 
 #while문 ~하는 동안에
-''''
+
 treehit = 0
 while True:
     treehit = treehit +1
@@ -112,7 +111,7 @@ while True:
 
 print('끝')
 
-'''
+
 
 a = 0
 while a < 10:
@@ -120,10 +119,10 @@ while a < 10:
     if a % 2 == 0: continue
     print(a)
 
-''' 
+
     if a % 2 == 1:
         print(a)
-'''
+
 
  #for문
 test = [91, 80, 72, 64, 59]
@@ -133,7 +132,7 @@ for score in [91, 80, 72, 64, 59]:
 
 #range : 범위를 나타내는 함수
 #range(시작지점, 끝나는 지점(+1), 얼만큼 커지는지)
-'''
+
 for i in range(1, 6, 1):
     if i % 2 == 0:
      print(i)
@@ -141,8 +140,6 @@ for i in range(1, 6, 1):
 for i in range(2, 6, 2):
     print(i)
 
-
-'''
 
 
 temp = [1,2,3,4,(5,6)]
@@ -203,31 +200,10 @@ print(list)
 list = [1]
 print(list + list(range(2, 11, 1)))
 print(list)
-for i in range(2, 11, 1):
+#for i in range(2, 11, 1):
 
-#range, append, for, in 등 배움
-
-
-score = [i for i in range(10, 91, 10)]
-score.reverse()
-print(score)
-
-#if(만약에), elif(만약이 아니면), else(아니면) 외우기, in, and, or, not
+# if(만약에), elif(만약이 아니면), else(아니면) 외우기, in, and, or, not
 # 비교연산자, while(참일때만 작동 false는 바로 다음걸로 넘어감)
-#if 조건문 brake, continue, for문
+# if 조건문 brake, continue, for문
 
-score = [i for i in range(50,91,10)]  # 주
-
-for i in range(4):
-    for x in range(len(score)):
-        print("%d 번째" %i, "// 값 : %d" %x)
-
-
-'''        
-[2단]
-2 *1 =2
-2 *2 = 4
-#19단까지
-
-홀짝을 맞추는 if문
 '''
