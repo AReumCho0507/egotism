@@ -33,7 +33,7 @@ while True:
         list = f.readline()
         if name in list:
             print("책이름: ", list [0])
-            print("코드: ", list [0:4])
+            print("코드: ", list [3:])
             f.close()
         else:
             print("책이 없습니다. 등록하시오.")
