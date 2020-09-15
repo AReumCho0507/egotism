@@ -17,6 +17,39 @@ print(data)
 #메모장에 값 넣기
 '''
 
+def register_book():
+    name = input("책 이름을 입력하세요: ")
+    code = input("코드를 입력하세요: ")  # '1234' -> int() 1234
+    f = open("도서관리시스템.txt", 'a', encoding='utf-8')
+    f.write(name + ':' + code + '\n')
+    f.close()
+    print('-' * 30)
+    print("책이 입력 되었습니다.")
+    print(':', code)
+    print('-' * 30)
+
+def select_book():
+    name = input("책 이름을 입력하세요: ")
+    f = open("도서관리시스템.txt", 'r', encoding='utf-8')
+    lst = f.read()
+    lst = lst.split('\n')
+    for x in lst:
+        name2 = ''
+        code2 = ''
+        for i, y in enumerate(x):
+            if y == ':':
+                name2 = x[:i]
+                code2 = x[i + 1:]
+                break
+
+        if name == name2:
+            print("책이름: ", name2)
+            print("코드: ", code2)
+            break
+    else:
+        print("책이 없습니다. 등록하시오.")
+    f.close()
+
 print('-'*30)
 x = '\n1. 종료\n 2. 선택\n 3. 등록'
 
@@ -25,43 +58,11 @@ while True:
     put = input("1~3 사이의 숫자를 입력하세요: ")
 
     if put == '1':
-            print("프로그램을 종료합니다.")
-            break
+        print("프로그램을 종료합니다.")
+        break
 
     elif put == '2':
-        name = input("책 이름을 입력하세요: ")
-        f = open("도서관리시스템.txt", 'r', encoding='utf-8')
-        lst = f.read()
-        #print(type(list(lst)))
-        #print(list(lst))
-        lst = lst.split('\n')
-
-
-        name2 =''
-        code2 = ''
-
-        for x in lst:
-            for i, y in enumerate(x):
-                if y == ':':
-                    name2 = x[:i]
-                    code2 = x[i+1:]
-                    break
-
-            if name == name2:
-                print("책이름: ", name2)
-                print("코드: ", code2)
-                break
-        else:
-            print("책이 없습니다. 등록하시오.")
-        f.close()
+        select_book()
 
     elif put == '3':
-        name = input("책 이름을 입력하세요: ")
-        code = input("코드를 입력하세요: ")#'1234' -> int() 1234
-        f = open("도서관리시스템.txt", 'a', encoding='utf-8')
-        f.write( name+':'+code+'\n' )
-        f.close()
-        print('-'*30)
-        print("책이 입력 되었습니다.")
-        print(':', code)
-        print('-' * 30)
+        register_book()
