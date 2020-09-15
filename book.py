@@ -32,8 +32,8 @@ while True:
         f = open("도서관리시스템.txt", 'r', encoding='utf-8')
         list = f.readline()
         if name in list:
-            print("책이름: ", line[0])
-            print("코드: ", line[0:4])
+            print("책이름: ", list [0])
+            print("코드: ", list [0:4])
             f.close()
         else:
             print("책이 없습니다. 등록하시오.")
@@ -46,5 +46,5 @@ while True:
         f.close()
         print('-'*30)
         print("책이 입력 되었습니다.")
-        print(':', new )
+        print(':', code )
         print('-' * 30)
