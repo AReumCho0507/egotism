@@ -15,7 +15,7 @@ for i in range(1, 11):
     f.write(data)
 f.close()
 
-f = open("오찬해.txt", 'r',encoding='utf-8')
+f = open("오찬해.txt", 'r', encoding='utf-8')
 data = f.read()
 print(data)
 lines = f.readlines()
